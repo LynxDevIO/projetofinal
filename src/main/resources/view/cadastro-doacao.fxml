@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml" fx:controller="pucgo.poobd.projetofinal.controller.CadastroDoacaoController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+    
+    <Label text="Registro de Doação" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+    
+    <GridPane hgap="10.0" vgap="10.0">
+        <Label text="Doador:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <ComboBox fx:id="doadorComboBox" GridPane.columnIndex="1" GridPane.rowIndex="0" prefWidth="200.0"/>
+        
+        <Label text="Entidade:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <ComboBox fx:id="entidadeComboBox" GridPane.columnIndex="1" GridPane.rowIndex="1" prefWidth="200.0"/>
+        
+        <Label text="Item:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField fx:id="itemField" GridPane.columnIndex="1" GridPane.rowIndex="2" prefWidth="200.0"/>
+        
+        <Label text="Quantidade:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <TextField fx:id="quantidadeField" GridPane.columnIndex="1" GridPane.rowIndex="3" prefWidth="200.0"/>
+        
+        <Label text="Data:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+        <DatePicker fx:id="dataPicker" GridPane.columnIndex="1" GridPane.rowIndex="4" prefWidth="200.0"/>
+    </GridPane>
+    
+    <HBox spacing="10.0" alignment="CENTER">
+        <Button text="Salvar" onAction="#salvarDoacao" prefWidth="100.0"/>
+        <Button text="Voltar" onAction="#voltar" prefWidth="100.0"/>
+    </HBox>
+</VBox> 

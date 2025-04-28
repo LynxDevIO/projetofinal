@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml" fx:controller="pucgo.poobd.projetofinal.controller.ListagemDoacoesController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+    
+    <Label text="Listagem de Doações" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+    
+    <HBox spacing="10.0" alignment="CENTER">
+        <Label text="Filtrar por:"/>
+        <ComboBox fx:id="filtroComboBox" prefWidth="150.0"/>
+        <TextField fx:id="filtroTextField" prefWidth="200.0"/>
+        <Button text="Filtrar" onAction="#filtrarDoacoes"/>
+        <Button text="Resetar" onAction="#resetarFiltro"/>
+    </HBox>
+    
+    <TableView fx:id="doacoesTableView" prefWidth="800.0" prefHeight="400.0">
+        <columns>
+            <TableColumn fx:id="doadorColumn" text="Doador" prefWidth="160.0"/>
+            <TableColumn fx:id="entidadeColumn" text="Entidade" prefWidth="160.0"/>
+            <TableColumn fx:id="itemColumn" text="Item" prefWidth="160.0"/>
+            <TableColumn fx:id="quantidadeColumn" text="Quantidade" prefWidth="160.0"/>
+            <TableColumn fx:id="dataColumn" text="Data" prefWidth="160.0"/>
+        </columns>
+    </TableView>
+    
+    <Button text="Voltar" onAction="#voltar" prefWidth="100.0"/>
+</VBox> 

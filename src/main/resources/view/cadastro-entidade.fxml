@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml" fx:controller="pucgo.poobd.projetofinal.controller.CadastroEntidadeController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+    
+    <Label text="Cadastro de Entidade Assistencial" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+    
+    <GridPane hgap="10.0" vgap="10.0">
+        <Label text="Nome:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="nomeField" GridPane.columnIndex="1" GridPane.rowIndex="0" prefWidth="200.0"/>
+        
+        <Label text="CNPJ:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="cnpjField" GridPane.columnIndex="1" GridPane.rowIndex="1" prefWidth="200.0"/>
+        
+        <Label text="Tipo:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <ComboBox fx:id="tipoComboBox" GridPane.columnIndex="1" GridPane.rowIndex="2" prefWidth="200.0"/>
+    </GridPane>
+    
+    <HBox spacing="10.0" alignment="CENTER">
+        <Button text="Salvar" onAction="#salvarEntidade" prefWidth="100.0"/>
+        <Button text="Voltar" onAction="#voltar" prefWidth="100.0"/>
+    </HBox>
+</VBox> 

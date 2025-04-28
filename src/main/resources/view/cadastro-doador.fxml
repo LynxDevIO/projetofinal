@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml" fx:controller="pucgo.poobd.projetofinal.controller.CadastroDoadorController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+    
+    <Label text="Cadastro de Doador" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+    
+    <GridPane hgap="10.0" vgap="10.0">
+        <Label text="Nome Completo:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="nomeCompletoField" GridPane.columnIndex="1" GridPane.rowIndex="0" prefWidth="200.0"/>
+        
+        <Label text="Telefone:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="telefoneField" GridPane.columnIndex="1" GridPane.rowIndex="1" prefWidth="200.0"/>
+        
+        <Label text="E-mail:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField fx:id="emailField" GridPane.columnIndex="1" GridPane.rowIndex="2" prefWidth="200.0"/>
+    </GridPane>
+    
+    <HBox spacing="10.0" alignment="CENTER">
+        <Button text="Salvar" onAction="#salvarDoador" prefWidth="100.0"/>
+        <Button text="Voltar" onAction="#voltar" prefWidth="100.0"/>
+    </HBox>
+</VBox> 
